@@ -78,7 +78,8 @@
   height: 100vh;
   position: absolute;
   background: #4e4b4b;
-  width: 16%;
+  /* width: 16%; */
+  width: 15vw;
   z-index: 6;
 }
 .token-event {
@@ -107,14 +108,14 @@
   height: 100vh;
   position: absolute;
   background: #902c2c;
-  width: 20vw;
+  width: 15vw;
 }
 .udyam-ees-mobile {
   position: absolute;
   bottom: 0;
   display: flex;
   justify-content: center;
-  width: 15vw;
+  width: 7vw;
   z-index: 10;
 }
 @media screen and (max-width: 600px) {
@@ -136,6 +137,9 @@
   .info {
     width: 20vw;
   }
+  .udyam-ees-mobile{
+    width:15vw;
+  }
 }
 @media screen and (max-width: 800px) {
   .udyam-nav {
@@ -153,5 +157,8 @@
   }
   .info {
     width: 15vw;
+  }
+  .udyam-ees-mobile{
+    width:15vw;
   }
 }
