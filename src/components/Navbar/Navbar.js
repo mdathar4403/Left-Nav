@@ -103,7 +103,7 @@ const Navbar = () => {
             </div>}
             {!slideLeader && <div className="leader">
                 <div className="token-event">
-                    <div className="digism event-name"><a href="#"> Digism</a></div>
+                    <div className="digism event-name"><a href="#">Digism</a></div>
                     <div className="ichip event-name"><a href="#">I-chip</a></div>
                     <div className="devbits event-name"><a href="#">Devbits</a></div>
                     <div className="commnet event-name"><a href="#">Commnet</a></div>

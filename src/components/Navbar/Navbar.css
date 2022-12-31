@@ -98,9 +98,27 @@
   color: #fff;
   text-decoration: none;
 }
-.event-name a:hover {
-  text-decoration: underline #1eaaac;
+.event-name a::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 55%;
+  margin: 28px auto;
+  margin-left: 24%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 4px;
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale 0.25s;
 }
+.event-name a:hover::after{
+  scale: 1;
+}
+
+/* .event-name a:hover {
+  text-decoration: underline #1eaaac;
+} */
 
 /* ----------Leader -events--------- */
 .leader {
@@ -160,5 +178,10 @@
   }
   .udyam-ees-mobile{
     width:15vw;
+  }
+}
+@media screen and (min-width:1000px){
+  .event-name{
+    font-size: 18px;
   }
 }
