@@ -89,7 +89,6 @@
 .event-name {
   display: flex;
   align-items: center;
-  /* margin: 2.2rem 0; */
   padding: 1.5rem 0;
   justify-content: center;
   height: 2vh;
