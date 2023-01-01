@@ -193,6 +193,9 @@
   .udyam-nav{
     width:60vw;
   }
+  .udyam-nav p{
+    font-size: 1.2rem;
+  }
   .menu-icon{
     display: block;
     color: #fff;
@@ -201,9 +204,16 @@
     top: 3%;
     left: 5%;
   }
- 
+  .close{
+    color: #fff;
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    font-size: 1.7rem;
+  }
   .hovered{
     display: flex;
+    padding-top: 0px;
     gap: 3rem;
     width: 100%;
   }
@@ -212,7 +222,9 @@
     width: 60vw;
   }
   .info{
-    margin-left: 2.5rem;
+    margin-left:2.3rem;
+    width: 6vh;
+    height: 10vh;
   }
   .leader{
     left: 0;

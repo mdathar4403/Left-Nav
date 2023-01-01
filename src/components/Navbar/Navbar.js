@@ -11,6 +11,11 @@ import udyam from '../Navbar/udyam.svg'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { TfiMenu } from 'react-icons/tfi'
+import { AiOutlineClose } from 'react-icons/ai'
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 
 const Navbar = () => {
 
@@ -28,13 +33,13 @@ const Navbar = () => {
             return;
         }
         else {
-            if(slideLeader===false){
+            if (slideLeader === false) {
                 document.querySelector('.leader').style.display = 'none';
             }
-            else{
+            else {
                 document.querySelector('.token').style.display = 'none';
             }
-            
+
             // document.querySelector('.leader').style.display = 'none';
             // document.querySelector('.token').style.display = 'none';
             document.querySelector('.udyam-nav').style.display = 'none';
@@ -43,10 +48,10 @@ const Navbar = () => {
     }
     function menuNav() {
         setNav(false);
-        if(slideLeader === false){
+        if (slideLeader === false) {
             document.querySelector('.leader').style.display = 'block';
         }
-        else{
+        else {
             document.querySelector('.token').style.display = 'block';
         }
         // document.querySelector('.token').style.display = 'block';
@@ -92,10 +97,16 @@ const Navbar = () => {
         setEvent(true);
         setLeader(true);
     }
+    function helloNav() {
+        setNav(true)
+    }
 
     return (
         <>
             {(!slideNav || width > 800) && <div className='udyam-nav'>
+                <div className="close" onClick={helloNav}>
+                    <AiOutlineClose />
+                </div>
                 <div className="udyam-img">
                     <img className='udyam-logo' src={udyam} alt="hero" />
                 </div>
@@ -120,6 +131,7 @@ const Navbar = () => {
                         <a href="#"><FaAward className='info' /></a>
                         <p>Leaderboard</p>
                     </div>
+
                 </div>
                 {/* <div className="udyam-ees">
                     <img className='ees-img' src={ees} alt="hreo" />
@@ -139,12 +151,12 @@ const Navbar = () => {
 
                     <div className="digism event-name" onClick={checkNav}><a href="#"> Digism</a></div>
                     <div className="ichip event-name" onClick={checkNav}><a href="#">I-chip</a></div>
-                    <div className="devbits event-name"  onClick={checkNav}><a href="#">Devbits</a></div>
-                    <div className="commnet event-name"  onClick={checkNav}><a href="#">Commnet</a></div>
-                    <div className="xiota event-name"  onClick={checkNav}><a href="#">X-iota</a></div>
-                    <div className="cassandra event-name"  onClick={checkNav}><a href="#">Cassandra</a></div>
-                    <div className="mosaic event-name"  onClick={checkNav}><a href="#">Mosaic</a></div>
-                    <div className="funckit event-name"  onClick={checkNav}><a href="#">Funckit</a></div>
+                    <div className="devbits event-name" onClick={checkNav}><a href="#">Devbits</a></div>
+                    <div className="commnet event-name" onClick={checkNav}><a href="#">Commnet</a></div>
+                    <div className="xiota event-name" onClick={checkNav}><a href="#">X-iota</a></div>
+                    <div className="cassandra event-name" onClick={checkNav}><a href="#">Cassandra</a></div>
+                    <div className="mosaic event-name" onClick={checkNav}><a href="#">Mosaic</a></div>
+                    <div className="funckit event-name" onClick={checkNav}><a href="#">Funckit</a></div>
                 </div>
             </div>}
             {!slideLeader && <div className="leader">
@@ -152,14 +164,14 @@ const Navbar = () => {
                     <IoIosArrowBack />
                 </div>
                 <div className="token-event">
-                <div className="digism event-name" onClick={checkNav}><a href="#"> Digism</a></div>
+                    <div className="digism event-name" onClick={checkNav}><a href="#"> Digism</a></div>
                     <div className="ichip event-name" onClick={checkNav}><a href="#">I-chip</a></div>
-                    <div className="devbits event-name"  onClick={checkNav}><a href="#">Devbits</a></div>
-                    <div className="commnet event-name"  onClick={checkNav}><a href="#">Commnet</a></div>
-                    <div className="xiota event-name"  onClick={checkNav}><a href="#">X-iota</a></div>
-                    <div className="cassandra event-name"  onClick={checkNav}><a href="#">Cassandra</a></div>
-                    <div className="mosaic event-name"  onClick={checkNav}><a href="#">Mosaic</a></div>
-                    <div className="funckit event-name"  onClick={checkNav}><a href="#">Funckit</a></div>
+                    <div className="devbits event-name" onClick={checkNav}><a href="#">Devbits</a></div>
+                    <div className="commnet event-name" onClick={checkNav}><a href="#">Commnet</a></div>
+                    <div className="xiota event-name" onClick={checkNav}><a href="#">X-iota</a></div>
+                    <div className="cassandra event-name" onClick={checkNav}><a href="#">Cassandra</a></div>
+                    <div className="mosaic event-name" onClick={checkNav}><a href="#">Mosaic</a></div>
+                    <div className="funckit event-name" onClick={checkNav}><a href="#">Funckit</a></div>
                 </div>
             </div>}
         </>
