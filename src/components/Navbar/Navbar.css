@@ -71,6 +71,13 @@
       }
   }
     */
+  .back{
+    color: #fff;
+    font-size: 1.6rem;
+    position: absolute;
+    top:3%;
+    left:80%
+  }
 /* ---------- Token - events-------- */
 
 .token {
@@ -80,7 +87,7 @@
   background: #4e4b4b;
   /* width: 16%; */
   width: 15vw;
-  z-index: 6;
+  z-index: 16;
 }
 .token-event {
   position: relative;
@@ -126,6 +133,7 @@
   position: absolute;
   background: #902c2c;
   width: 15vw;
+  z-index: 15;
 }
 .udyam-ees-mobile {
   position: absolute;
@@ -133,9 +141,9 @@
   display: flex;
   justify-content: center;
   width: 7vw;
-  z-index: 10;
+  z-index: 20;
 }
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
   .udyam-nav {
     width: 20vw;
   }
@@ -148,7 +156,6 @@
     width: 24%;
   }
   .hovered {
-    /* padding-top: 12px; */
     width: 20vw;
   }
   .info {
@@ -157,8 +164,9 @@
   .udyam-ees-mobile{
     width:15vw;
   }
-}
-@media screen and (max-width: 800px) {
+} */
+/* @media screen and (max-width: 800px) {
+  
   .udyam-nav {
     width: 15vw;
   }
@@ -169,7 +177,6 @@
     left: 15vw;
   }
   .hovered {
-    /* padding-top: 12px; */
     width: 15vw;
   }
   .info {
@@ -177,6 +184,39 @@
   }
   .udyam-ees-mobile{
     width:15vw;
+  }
+} */
+.menu-icon{
+  display: none;
+}
+@media screen and (max-width: 800px){
+  .udyam-nav{
+    width:60vw;
+  }
+  .menu-icon{
+    display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 3%;
+    left: 5%;
+  }
+ 
+  .hovered{
+    display: flex;
+    gap: 3rem;
+    width: 100%;
+  }
+  .token{
+    left: 0;
+    width: 60vw;
+  }
+  .info{
+    margin-left: 2.5rem;
+  }
+  .leader{
+    left: 0;
+    width: 60vw;
   }
 }
 @media screen and (min-width:1000px){
